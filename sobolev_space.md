@@ -31,13 +31,11 @@ $$
  设 $$\alpha=(\alpha_1,\alpha_2,\dots,\alpha_n)\in Z_{+}^{n}$$ 是一个非负整数的向量,这里 $$Z_{+}^{n}$$ 是非负整数的集合.
  $$|\alpha|=\sum_{i=1}^{n}\alpha_i$$ .对于一个连续函数 $$v$$ 和 $$x=(x_1,x_2,\dots,x_n)\in R^n$$ ,用
 $$
-
 D^{\alpha}v=\frac{\partial^{|\alpha|}v}{\partial x_1^{\alpha_1}\dots x_n^{\alpha_n}},
 $$
 且
 
 $$
-
 x^{\alpha}=x_1^{\alpha_1}\dots x_n^{\alpha_n}.
 $$
  4.**常用的几个banach空间**
@@ -45,11 +43,10 @@ $$
 (1) $$C(\overline\Omega)$$ 是一个连续函数的空间,
 
 $$
-
 ||v||_{C(\overline\Omega)}=max_{x\in\overline\Omega}|v(x)|
 $$
 
-(2) $$C_{0}^{\infty}(\Omega)$$ 是无限维导函数的空间,
+(2) $$C_{0}^{\infty}(\Omega)$$ 是无穷可微函数空间,
 
 $$
 supp(v)=closure~of \{x\in\Omega:v(x)\neq 0\}
@@ -279,7 +276,7 @@ $$
  
 5.**分数阶sobolev空间**
 
- 古典导数的定义是通过逐点求差商的极限.对于sobolev空间的函数,我们用差商的 $p$ 方可积描述它的可微性.
+ 古典导数的定义是通过逐点求差商的极限.对于sobolev空间的函数,我们用差商的 $$p$$ 方可积描述它的可微性.
 
 (1)对于 $$0<\theta<1$$ , $$1\leq p<\infty$$ ,定义
 $$
@@ -397,19 +394,19 @@ $$
 ||v||_{k,R^n}\simeq||(1+|.|^2)^{\frac{k}{2}}\widehat v||_{0,R^n}
 $$
 
-$pf:$
+证明:
 $$
 ||v||_{k,R^n}\\=(\int_{R^n}(\sum_{|\alpha|\leq k}|\xi|^{2\alpha})|\widehat v(\xi)|^2\mathrm{d}\xi)\\ \simeq  (\int_{R^n}(1+|\xi|^2)^k|\widehat v(\xi)|^2\mathrm{d}\xi)^{\frac{1}{2}}\\ \simeq(\int_{R^n}((1+|\xi|^2)^{k/2}|\widehat v(\xi)|)^2\mathrm{d}\xi)^{\frac{1}{2}}\\ \simeq||(1+|.|^2)^{\frac{k}{2}}\widehat v||_{0,R^n}
 $$
 
-这个关系说明sobolev空间 $H^{k}(R^n)$ 可以等价的定义为
+这个关系说明sobolev空间 $$H^{k}(R^n)$$ 可以等价的定义为
 
 $$
 H^{k}(R^n)=\{v\in L^{2}(R^n),(1+|\xi|^2)^{\frac{k}{2}}\overline v\in L^{2}(R^n)\}
 $$
 
 这可以用来描述实数指数的sobolev空间.
-即对任意的 $s\in[0,\infty)$ ,sobolev空间 $H^{s}(R^n)$ 可以定义如下:
+即对任意的 $$s\in[0,\infty)$$ ,sobolev空间 $$H^{s}(R^n)$$ 可以定义如下:
 
 $$
 H^{s}(R^n)=\{v\in L^{2}(R^n),(1+|\xi|^2)^{\frac{s}{2}}\overline v\in L^{2}(R^n)\}
@@ -420,13 +417,14 @@ $$
 ||v||_{s,R^n}:=||(1+|.|^2)^{\frac{s}{2}}\overline v||_{0,R^n}
 $$
 
-例1.11说明 $\delta$ 函数是 $H^{s}(\Omega)$ 上的一个连续线性泛函;空间维数大时, $H_{0}^{1}(\Omega)$ 不够光滑,不能作为一个有界线性泛函.
+例1.11说明 $$\delta$$ 函数是 $$H^{s}(\Omega)$$ 上的一个连续线性泛函;空间维数大时, $$H_{0}^{1}(\Omega)$$ 不够光滑,不能作为一个有界线性泛函.
 
 ###1.3延拓定理
-延拓定理是sobolev空间最基础的结论.傅里叶变换是一个有用的工具.但是它仅仅只能用于整个 $R^n$ 空间内的函数.我们一般研究的是在 $\Omega \subset R^n$ 中,为了从 $R^n$ 空间到有界区域 $\Omega$ 的结果一般化,我们将定义在 $W^{k,p}(\Omega)$ 的函数延拓到 $W^{k,p}(R^n)$ 中.这里只给出结果.
-延拓定理:对于任意有界的利普希茨区域 $\Omega$ ,任意 $s\geq 0$ , $1\leq p<\infty$ ,存在一个线性算子 $E$ : $W^{s,p}(\Omega)\to W^{s,p}(R^n)$ ,使得
-(1) $Eu|_{\Omega}=u$
-(2) $E$是连续的.即存在一个与 $s\geq 0$ 有关的常数 $C(s,\Omega)$ ,使得对任意 $1\leq p\leq\infty$ ,有
+延拓定理是sobolev空间最基础的结论.傅里叶变换是一个有用的工具.但是它仅仅只能用于整个 $$R^n$$ 空间内的函数.我们一般研究的是在
+$$\Omega \subset R^n$$ 中,为了从 $$$R^n$$ 空间到有界区域 $$\Omega$$ 的结果一般化,我们将定义在 $$W^{k,p}(\Omega)$$ 的函数延拓到 $$W^{k,p}(R^n)$$中.这里只给出结果.
+延拓定理:对于任意有界的利普希茨区域 $$\Omega$$ ,任意 $$s\geq 0$$ , $$1\leq p<\infty$$ ,存在一个线性算子 $$E$$ : $$W^{s,p}(\Omega)\to W^{s,p}(R^n)$$ ,使得
+(1) $$Eu|_{\Omega}=u$$
+(2) $$E$是连续的.即存在一个与 $$s\geq 0$$ 有关的常数 $$C(s,\Omega)$$ ,使得对任意 $$1\leq p\leq\infty$$ ,有
 
 $$
 ||Ev||_{s,p,\Omega}\leq C(s,\Omega)||v||_{s,p,\Omega}
@@ -434,46 +432,47 @@ $$
 
 ###1.4嵌入定理
 
- 1. 对于两个巴拿赫空间 $B_1,B_0$ ,称 $B_1$ 是连续的嵌入到 $B_0$ .如果对任意 $u\in B_1$ ,则 $u\in B_0$ ,且是连续的.即对于所有的 $u\in B_1$ ,有 $||u||_{B_0}\lesssim||u||_{B_1}$ .
+ 1. 对于两个巴拿赫空间 $$B_1,B_0$$ ,称 $$B_1$$ 是连续的嵌入到 $$B_0$$ .如果对任意 $$u\in B_1$$ ,则 $$u\in B_0$$ ,
+ 且是连续的.即对于所有的 $$u\in B_1$$ ,有 $$||u||_{B_0}\lesssim||u||_{B_1}$$ .
  2. 定理1.15
  **一般的sobolev嵌入:**
- $1\leq p\leq\infty$,$k\in Z_{+}$ ,且 $\Omega$ 是 $R^n$ 上的一个有界的利普希茨区域.
- (1)若 $kp>n$,
-则 $W^{k,p}(\Omega)\hookrightarrow C(\overline{\Omega})$
- (2)若 $kp=n$,
-则 $W^{k,p}(\Omega)\hookrightarrow L^{q}(\Omega)$,$q\in[1,\infty)$
-特别的, $W^{n,1}(\Omega)\hookrightarrow C(\overline{\Omega})$
-(3)若 $kp<n$,
-则 $W^{k,p}(\Omega)\hookrightarrow L^{q}(\Omega)$,$\frac{1}{q}=\frac{1}{p}-\frac{k}{n}$
- 3. 用 $x$ 轴对应 $L^p$ 空间,用 $y$ 轴对应光滑性,在第一象限内,过点 $(\frac{1}{p},0)$ 且斜率为 $n$ 的直线,在这条直线的上半部分可以嵌入到 $L^p$ 空间,下半部分不能嵌入到 $L^p$ 空间.那么如果在直线上点是否可以嵌入到 $L^p$ 空间?为了快速的确定一个点是否在界线上,我们介绍
+ $$1\leq p\leq\infty$$,$$k\in Z_{+}$$ ,且 $$\Omega$$ 是 $$R^n$$ 上的一个有界的利普希茨区域.
+ (1)若 $$kp>n$$,
+则 $$W^{k,p}(\Omega)\hookrightarrow C(\overline{\Omega})$$
+ (2)若 $$kp=n$$,
+则 $$W^{k,p}(\Omega)\hookrightarrow L^{q}(\Omega)$$,$$q\in[1,\infty)$$
+特别的, $$W^{n,1}(\Omega)\hookrightarrow C(\overline{\Omega})$$
+(3)若 $$kp<n$$,
+则 $$W^{k,p}(\Omega)\hookrightarrow L^{q}(\Omega)$$,$$\frac{1}{q}=\frac{1}{p}-\frac{k}{n}$$
+ 3. 用 $$x$$ 轴对应 $$L^p$$ 空间,用 $$y$$ 轴对应光滑性,在第一象限内,过点 $$(\frac{1}{p},0)$$ 且斜率为 $$n$$ 的直线,在这条直线的上半部分可以嵌入到 $$L^p$$ 空间,下半部分不能嵌入到 $$L^p$$ 空间.那么如果在直线上点是否可以嵌入到 $$L^p$$ 空间?为了快速的确定一个点是否在界线上,我们介绍
  
  $$
  sob_{n}(k,p)=k-\frac{n}{p}
  $$
  
-如果 $sob_{n}(k,p)>0$ ,则 $W^{k,p}(\Omega)$ 空间上的函数是连续的.一般的,
+如果 $$sob_{n}(k,p)>0$$ ,则 $$W^{k,p}(\Omega)$$ 空间上的函数是连续的.一般的,
 
 $$
 W^{k,p}(\Omega)\hookrightarrow W^{l,q}(\Omega),if~k>l~and~sob_{n}(k,p)>sob_{n}(l,p)
 $$
-sobolev空间上对应界线上的点是否可以嵌入到 $L^p$ 空间.例如, $n\geq1$ ,
- $W^{n,1}(\Omega)\hookrightarrow L^{\infty}(\Omega)$ ,
-但是 $W^{1,n}(\Omega)$ 不能嵌入到 $L^{\infty}(\Omega)$
+sobolev空间上对应界线上的点是否可以嵌入到 $$L^p$$ 空间.例如, $$n\geq1$$ ,
+ $$W^{n,1}(\Omega)\hookrightarrow L^{\infty}(\Omega)$$ ,
+但是 $$W^{1,n}(\Omega)$$ 不能嵌入到 $$L^{\infty}(\Omega)$$
 
 ###1.5 迹定理
 
- 1. 定理1.19:设 $\Omega\subset R^n$ 是一个连续有界的利普希茨区域.迹算子 $\gamma:C^1(\overline\Omega)\mapsto C(\Gamma)$ 可以连续的延拓到 $\gamma:H^1(\Omega)\mapsto H^{\frac{1}{2}}(\Gamma)$ ,
+ 1. 定理1.19:设 $$\Omega\subset R^n$$ 是一个连续有界的利普希茨区域.迹算子 $$\gamma:C^1(\overline\Omega)\mapsto C(\Gamma)$$ 可以连续的延拓到 $$\gamma:H^1(\Omega)\mapsto H^{\frac{1}{2}}(\Gamma)$$ ,
 即迹不等式:
  
 $$
 ||\gamma(u)||_{\frac{1}{2},\Gamma}\lesssim||u||_{1,\Omega},
 $$
 
-对于所有的 $u\in H^1(\Omega) $
+对于所有的 $$u\in H^1(\Omega) $$
 迹算子是满射且它有一个连续的逆算子.
 
 ###1.6范数等价定理
- 1. 对 $i\leq k+1$ , 定义一个范数 $||.||_{k+1,p}$ 包含所有的 $i$ 阶弱导,可以证明对所有的 $u\in W^{k+1,p}(\Omega)$ ,有
+ 1. 对 $$i\leq k+1$$ , 定义一个范数 $$||.||_{k+1,p}$$ 包含所有的 $$i$$ 阶弱导,可以证明对所有的 $$u\in W^{k+1,p}(\Omega)$$ ,有
 $$
 ||u||_{k+1,p}\simeq||u||_{0,p}+|u|_{k+1,p}
 $$
@@ -481,14 +480,14 @@ $$
 $$
 W^{k+1,p}(\Omega)=P(\Omega)\oplus(W^{k+1,p}/P(\Omega))
 $$
-差商空间 $(W^{k+1,p}/P(\Omega))$ :表示 $W$ 中的任意两个元素相减是 $P(\Omega)$ 中的元素.
- 2. 定理1.20:对任意的 $u\in W^{k+1,p}(\Omega)$ ,有
+差商空间 $$(W^{k+1,p}/P(\Omega))$$ :表示 $$W$$ 中的任意两个元素相减是 $$P(\Omega)$$ 中的元素.
+ 2. 定理1.20:对任意的 $$u\in W^{k+1,p}(\Omega)$$ ,有
 $$
 inf_{p \in \rho _k(\Omega)}||u+p||_{k+1,p,\Omega}\simeq|u|_{k+1,p,\Omega}
 $$
 
-在多项式空间中,由于他是有限维的,所以范数 $||.||_{0,p}$ 可以被多项式空间 $\rho _k(\Omega)$ 的其他范数定义.
-一般的,我们在 $W^{k+1,p}(\Omega)$ 上的半范数  $F(.)$ ,即
+在多项式空间中,由于他是有限维的,所以范数 $$||.||_{0,p}$$ 可以被多项式空间 $$\rho _k(\Omega)$$ 的其他范数定义.
+一般的,我们在 $$W^{k+1,p}(\Omega)$$ 上的半范数  $$F(.)$$ ,即
 $$
 F:W^{k+1,p}(\Omega)\to R^{+}
 $$
@@ -498,14 +497,14 @@ $$
 F(u+v)\leq F(u)+F(v),F(\alpha u)\leq |\alpha|F(u)
 $$
 
-范数有一个条件:对 $p\in \rho _k(\Omega),F(p)=0$ ,当且仅当 $p=0$
- 3. 如果 $u_k\to u$ in $W^{k+1,p}(\Omega)$,则
+范数有一个条件:对 $$p\in \rho _k(\Omega),F(p)=0$$ ,当且仅当 $$p=0$$
+ 3. 如果 $$u_k\to u$$ in $$W^{k+1,p}(\Omega)$$,则
  $$F(u)\leq\lim_{k\to \infty}\inf F(u_k)$$
 
-证明:由于 $L^2$ 范数的弱下半连续性可得
+证明:由于 $$L^2$$ 范数的弱下半连续性可得
 $$\int_{\Omega}|\nabla v|^2\mathrm{d}x\leq\lim_{k\to \infty}\int_{\Omega}|\nabla v_k|^2\mathrm{d}x$$
 
-又由 $\{v_k\}$ 的弱收敛性得
+又由 $$\{v_k\}$$ 的弱收敛性得
 $$J(v_k)=\frac{1}{2}\int_{\Omega}|\nabla v_k|^2\mathrm{d}x-\int_{\Omega}fv_k\mathrm{d}x$$
 
 两边同时取下极限得
@@ -515,91 +514,95 @@ $$\underline{\lim}_{k\to\infty}J(v_k)=\frac{1}{2}\underline{\lim}_{k\to\infty}\i
 
 所以 $$F(u)\leq\lim_{k\to \infty}\inf F(u_k)$$
  4. sobolev范数等价定理
- 定理1.21:如果 $F$ 是一个在 $W^{k+1,p}(\Omega)$ 连续的半范数使得对 $p\in \rho_k(\Omega),F(p)=0$ ,当且仅当 $p=0$ ,则
+ 定理1.21:如果 $$F$$ 是一个在 $$W^{k+1,p}(\Omega)$$ 连续的半范数使得对 $$p\in \rho_k(\Omega),F(p)=0$$ ,当且仅当 $$p=0$$ ,则
 $$
 ||u||_{k+1,p,\Omega}\simeq|u|_{k+1,p,\Omega}+F(u),
 $$
 
-对所有的 $u\in W^{k+1,p}(\Omega)$
+对所有的 $$u\in W^{k+1,p}(\Omega)$$
  5. 证明Friedriches inequality
  $$||v||_{1,p,\Omega}\lesssim|v|_{1,p,\Omega}+|\int_{T}v\mathrm{d}s|$$
  
-对于所有的 $v\in W^{1,p}(\Omega)$
+对于所有的 $$v\in W^{1,p}(\Omega)$$
 要证明这个不等式需要用到下边的定理:
 **定理:**
-设 $P_k(\Omega)(k\geq0)$ 为 $\Omega$ 上次数 小于等于 $k$ 的多项式的全体, $N=dimP_k(\Omega)$,又设 $f_i\in(W^{k+1,p}(\Omega))',i=1,2,\dots,N,p\in[1,\infty]$ ,使得当  $f_i(q)=0,\forall1\leq i\leq N,q\in P_k(\Omega)$ 时,就有 $q=0$ ,则存在常数 $C_{\Omega}$ 使得
+设 $$P_k(\Omega)(k\geq0)$$ 为 $$\Omega$$ 上次数 小于等于 $$k$$ 的多项式的全体, $$N=dimP_k(\Omega)$$,又设 $$f_i\in(W^{k+1,p}(\Omega))',i=1,2,\dots,N,p\in[1,\infty]$$ ,使得当  $$f_i(q)=0,\forall1\leq i\leq N,q\in P_k(\Omega)$$ 时,就有 $$q=0$$ ,则存在常数 $$C_{\Omega}$$ 使得
 $$||v||_{k+1,p,\Omega}\lesssim|v|_{k+1,p,\Omega}+\sum_{i=1}^{N}|f_i(v)|$$
 
-证明:反证法证.假设定理不成立,则对每个 $n$ 存在 $v_n$ 使得
+证明:反证法证.假设定理不成立,则对每个 $$n$$ 存在 $$v_n$$ 使得
 $$||v||_{k+1,p,\Omega}=1\\
 |v|_{k+1,p,\Omega}+\sum_{i=1}^{N}|f_i(v)|<\frac{1}{n}$$
 
-由于 $\{v_n\}$ 是 $W^{k+1,p}(\Omega)$ 中的有界序列,根据嵌入定理,$W^{k+1,p}(\Omega)\subset\subset W^{k,p}(\Omega)$ ,知存在子序列,仍记为 $\{v_n\}$ 使得 $v_n$ 在 $W^{k,p}(\Omega)$ 中收敛,即得
+由于 $$\{v_n\}$$ 是 $$W^{k+1,p}(\Omega)$$ 中的有界序列,根据嵌入定理,$$W^{k+1,p}(\Omega)\subset\subset W^{k,p}(\Omega)$$ ,知存在子序列,仍记为 $$\{v_n\}$$ 使得 $$v_n$$ 在 $$W^{k,p}(\Omega)$$ 中收敛,即得
 $$||v_n-v_m||_{k,p,\Omega}\to 0,n,m\to \infty$$
 
 由$$|v|_{k+1,p,\Omega}+\sum_{i=1}^{N}|f_i(v)|<\frac{1}{n}$$知
 $$|v_n-v_m|_{k+1,p,\Omega}\leq|v_n|_{k+1,p,\Omega}+|v_m|_{k+1,p,\Omega}\to 0$$
 
-所以 $\{v_n\}$ 是 $W^{k+1,p}(\Omega)$ 中的柯西序列.由是 $W^{k+1,p}(\Omega)$ 中的完备性得,存在 $v\in W^{k+1,p}(\Omega)$ ,使得在 $W^{k+1,p}(\Omega)$ 中 $v_n\to v$
+所以 $$\{v_n\}$$ 是 $$W^{k+1,p}(\Omega)$$ 中的柯西序列.由是 $$W^{k+1,p}(\Omega)$$ 中的完备性得,存在 $$v\in W^{k+1,p}(\Omega)$$ ,使得在 $$W^{k+1,p}(\Omega)$$ 中 $$v_n\to v$$
 所以
 $$|v|_{k+1,p,\Omega}+\sum_{i=1}^{N}|f_i(v)|=0$$
 
 从而
 $$|v|_{k+1,p,\Omega}=0$$
 
-即 $v\in P_k(\Omega)$ ,且 $|f_i(v)|=0$ ,由假设得 $v=0$ ,这与 $||v||_{k+1,p,\Omega}=1$ 矛盾,所以假设不成立.得证.
-证明不等式:在此定理中令 $k=0,p_2=2$
+即 $$v\in P_k(\Omega)$$ ,且 $$|f_i(v)|=0$$ ,由假设得 $$v=0$$ ,这与 $$||v||_{k+1,p,\Omega}=1$$ 矛盾,所以假设不成立.得证.
+证明不等式:在此定理中令 $$k=0,p_2=2$$
 $$f_1(v)=\int_{\partial{\Omega}}v\mathrm{d}{\delta}$$
 
 则有
 $$|f_1(v)|\leq |\partial{\Omega}|^{1/2}||v||_{0,\partial{\Omega}}\leq C_{\Omega}||v||_{1,\Omega}$$
 
-即 $f_1\in (H^1(\Omega))'$ ,又若 $0\neq q_0\in P_0(\Omega)$ ,则
+即 $$f_1\in (H^1(\Omega))'$$ ,又若 $$0\neq q_0\in P_0(\Omega)$$ ,则
 $$f_1(q_0)=q_0|\partial{\Omega}|\neq 0$$
 
 从而由上述定理可得证明.
-同理可证 $T_0\subset \partial{\Omega}$ 且 $T_0>0$ 有
+同理可证 $$T_0\subset \partial{\Omega}$$ 且 $$T_0>0$$ 有
 $$||v||_{1,\Omega}\lesssim|v|_{1,\Omega}+|\int_{T_0}v\mathrm{d}s|$$
 
 #椭圆边界问题
 
  1. Dirichlet问题:
+$$
 \begin{cases}
 -\bigtriangleup u+bu=f & in ~~~\Omega \\
 u=g, &   on ~~~\partial\Omega
 \end{cases}
-其中 $b\in L^{\infty}(\Omega),b\geq 0,f\in L^2(\Omega)$
+$$
+其中 $$b\in L^{\infty}(\Omega),b\geq 0,f\in L^2(\Omega)$$
 边界条件:
 根据变分形式可选择试探函数空间和检验函数空间分别为
 $$U=H_{0}^{1}(\Omega),V=H_{0}^{1}(\Omega)$$
  2. Nemann问题
+$$
  \begin{cases}
 -\bigtriangleup u=f & in ~~~\Omega \\
 u|_{\partial\Omega}=g, &   on ~~~\partial\Omega
 \end{cases}
-其中 $b\in L^{\infty}(\Omega),b\geq 0,f\in L^2(\Omega)$
+$$
+其中 $$b\in L^{\infty}(\Omega),b\geq 0,f\in L^2(\Omega)$$
 边界条件:
 根据变分形式可选择试探函数空间和检验函数空间分别为
 $$U=H^{1}(\Omega)/R,V=H^{1}(\Omega)$$
 即两个函数相差一个常数.
- 3. 定理2.2设 $f\in L^2(\Omega)$,则$-\bigtriangleup u=f~~~in~~~  L^2(\Omega)$.即
+ 3. 定理2.2设 $$f\in L^2(\Omega)$$,则$$-\bigtriangleup u=f~~~in~~~  L^2(\Omega)$$.即
  $$\int_{\Omega}-\bigtriangleup uv\mathrm{d}x=\int_{\Omega}fv\mathrm{d}x$$
-$u$满足在边界上为0,且在边界上$\nabla u\vec n=0$.
-证明:当 $f\in L^2(\Omega),<f,v>=(f,v)$ .选择 $v\in C_{0}^{\infty}\subset V$
+$$u$$ 满足在边界上为 $$0$$,且在边界上$$\nabla u\vec n=0$$.
+证明:当 $$f\in L^2(\Omega),<f,v>=(f,v)$$ .选择 $$v\in C_{0}^{\infty}\subset V$$
 则
 $$<-\bigtriangleup u,v>=(f,v),\forall v\in  C_{0}^{\infty}$$
 
-即 $-\bigtriangleup u$ 在分布意义下等于 $f\in L^2(\Omega)$ .
-由于 $C_{0}^{\infty}$ 在 $ L^2(\Omega)$ 稠密,且在 $ L^2(\Omega)$ 连续,所以可以推出
+即 $$-\bigtriangleup u$$ 在分布意义下等于 $$f\in L^2(\Omega)$$ .
+由于 $$C_{0}^{\infty}$$ 在 $$ L^2(\Omega)$$ 稠密,且在 $$ L^2(\Omega)$$ 连续,所以可以推出
  $$\int_{\Omega}-\bigtriangleup uv\mathrm{d}x=\int_{\Omega}fv\mathrm{d}x$$
 
-当 $-\bigtriangleup u\in L^2(\Omega)$ ,对任意的 $v\in H^1$ 有
+当 $$-\bigtriangleup u\in L^2(\Omega)$$ ,对任意的 $$v\in H^1$$ 有
 $$int_{\Omega}\nabla u\nabla v\mathrm{d}x=-\int_{\Omega}-\bigtriangleup uv\mathrm{d}x+\int_{\partial\Omega}\frac{\partial u}{\partial{\vec n}}v\mathrm{d}S$$
 
 所以
 $$\int_{\partial\Omega}\frac{\partial u}{\partial{\vec n}}v\mathrm{d}S=0$$
 
-由 $v$ 的任意性可得 $\nabla u\vec n=0$ .
+由 $$v$$ 的任意性可得 $$\nabla u\vec n=0$$ .
  4. 证明
  $$\widehat{D^{\alpha}v}(\xi)=(i\xi)^{\alpha}\widehat v(\xi)=-(i\xi)^{\alpha}|\xi|^{-2}\widehat{\bigtriangleup v}(\xi)$$
 证明:由傅里叶变换公式:
@@ -637,25 +640,25 @@ $$
 \int_{\Omega}\int_{\Omega}\frac{|v(x)-v(y)|^p}{|x-y|^{n+\theta p}}\mathrm{d}x\mathrm{d}y<\infty
 $$
 
-利用坐标变换 $\overline x =x-y$ , $\overline y =x+y$ 得
+利用坐标变换 $$\overline x =x-y$$ , $$\overline y =x+y$$ 得
 
 $$ 
 \int_{0}^{1}\frac{1}{\overline x^{\theta p}}\mathrm{d}{\overline x}<\infty
 $$
 
-这里要求 $\theta<\frac{1}{p}$ .特别的,我们可以推出 $S\in H^{1/2-\varepsilon}(-1,1)$ ,对任意的 $\varepsilon \leq 1/2$ ,但是
-$S\notin H^{1/2-\varepsilon}(-1,1)$ .
+这里要求 $$\theta<\frac{1}{p}$$ .特别的,我们可以推出 $$S\in H^{1/2-\varepsilon}(-1,1)$$ ,对任意的 $$\varepsilon \leq 1/2$$ ,但是
+$$S\notin H^{1/2-\varepsilon}(-1,1)$$ .
 **问题二:证明定理1.9**
-定理1.9:设 $v\in D'(\Omega)$,则 $v\in W^{k,p}(\Omega)$ 当且仅当 
+定理1.9:设 $$v\in D'(\Omega)$$,则 $$v\in W^{k,p}(\Omega)$$ 当且仅当 
 
 $$
 v=\sum_{|\alpha|\leq k}D^{\alpha}v_{\alpha},
 $$
 
-对任意的 $v_{\alpha}\in L^p(\Omega)$
-注意: $C_{0}^{\infty}(\Omega)$在$W^{k,p}(\Omega)$ 中不稠密,因此 $W^{k,p}(\Omega)$ 的对偶空间不能作为广义函数的子空间嵌入.
+对任意的 $$v_{\alpha}\in L^p(\Omega)$$
+注意: $$C_{0}^{\infty}(\Omega)$$ 在 $$W^{k,p}(\Omega)$$ 中不稠密,因此 $$W^{k,p}(\Omega)$$ 的对偶空间不能作为广义函数的子空间嵌入.
 **问题三:例1.11的证明** 
-在 $R^n$ 中, $\delta$ 函数的傅里叶变换是1,在极坐标下,可以看出 $\delta\in H^{-s}$ 仅仅对于 $s>2/n$ .因此当 $n\geq2$ 时, $\delta\notin H^{-1}$
+在 $$R^n$$ 中, $$\delta$$ 函数的傅里叶变换是1,在极坐标下,可以看出 $$\delta\in H^{-s}$$ 仅仅对于 $$s>2/n$$ .因此当 $$n\geq2$$ 时, $$\delta\notin H^{-1}$$
 **问题四:证明** 
 $$W^{n,1}(\Omega) 可以嵌入到 L^{\infty}(\Omega)~~~~~~~~but ~~~W^{1,n}(\Omega)不能嵌入到 L^{\infty}(\Omega)$$
 **问题五:证明
